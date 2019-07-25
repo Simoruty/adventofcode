@@ -41,15 +41,34 @@ https://adventofcode.com/
 │   │               ├── Common.java
 │   │               └── Main.java
 │   └── day9
-│       ├── input
-│       ├── pom.xml
-│       └── src
-│           ├── main
-│           │   ├── java
-│           │   │   ├── Common.java
-│           │   │   └── Main.java
-│           │   └── resources
-│           └── test
-│               └── java
+│   │   ├── input
+│   │   ├── pom.xml
+│   │   └── src
+│   │       ├── main
+│   │       │   ├── java
+│   │       │   │   ├── Common.java
+│   │       │   │   └── Main.java
+│   │       │   └── resources
+│   │       └── test
+│   │           └── java
+│   └── day10
+│       ├── assignment
+│       ├── day10.iml
+│       ├── out
+│       │   └── production
+│       │       └── day10
+│       │           └── com
+│       │               └── simoruty
+│       │                   ├── Common.class
+│       │                   ├── Main.class
+│       │                   └── assignment
+│       ├── output
+│       └── src
+│           └── com
+│               └── simoruty
+│                   ├── Common.java
+│                   └── Main.java
+│
+│
 └── README.md
 ```

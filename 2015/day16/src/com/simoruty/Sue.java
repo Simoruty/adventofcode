@@ -170,7 +170,7 @@ public class Sue {
         return s.toString();
     }
 
-    public boolean contains(Sue aunt) {
+    public boolean containsTask1(Sue aunt) {
         int tot = 0;
         if (akitas == aunt.getAkitas() && akitas != -1)
             tot++;
@@ -189,6 +189,32 @@ public class Sue {
         if (samoyeds == aunt.getSamoyeds() && samoyeds != -1)
             tot++;
         if (trees == aunt.getTrees() && trees != -1)
+            tot++;
+        if (vizslas == aunt.getVizslas() && vizslas != -1)
+            tot++;
+
+        return tot == size();
+    }
+
+    public boolean containsTask2(Sue aunt) {
+        int tot = 0;
+        if (akitas == aunt.getAkitas() && akitas != -1)
+            tot++;
+        if (cars == aunt.getCars() && cars != -1)
+            tot++;
+        if (cats > aunt.getCats() && cats != -1)
+            tot++;
+        if (children == aunt.getChildren() && children != -1)
+            tot++;
+        if (goldfish < aunt.getGoldfish() && goldfish != -1)
+            tot++;
+        if (perfumes == aunt.getPerfumes() && perfumes != -1)
+            tot++;
+        if (pomeranians < aunt.getPomeranians() && pomeranians != -1)
+            tot++;
+        if (samoyeds == aunt.getSamoyeds() && samoyeds != -1)
+            tot++;
+        if (trees > aunt.getTrees() && trees != -1)
             tot++;
         if (vizslas == aunt.getVizslas() && vizslas != -1)
             tot++;

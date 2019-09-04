@@ -14,7 +14,7 @@ public class Main {
         System.out.println();
         ArrayList<Sue> aunts = fillAunt(input);
         for (Sue aunt : aunts) {
-            if (aunt.contains(toFind)) {
+            if (aunt.containsTask2(toFind)) {
                 System.out.println(aunt);
             }
         }

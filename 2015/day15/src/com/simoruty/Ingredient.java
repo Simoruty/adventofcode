@@ -2,17 +2,21 @@ package com.simoruty;
 
 public class Ingredient {
     private String name;
-    private String capacity;
-    private String flavor;
-    private String texture;
-    private String calories;
-    private String durability;
+    private int capacity;
+    private int flavor;
+    private int texture;
+    private int calories;
+    private int durability;
 
-    public String getDurability() {
-        return durability;
+    Ingredient() {
     }
 
-    public void setDurability(String durability) {
+    Ingredient(String name, int capacity, int flavor, int texture, int calories, int durability) {
+        this.name = name;
+        this.capacity = capacity;
+        this.flavor = flavor;
+        this.texture = texture;
+        this.calories = calories;
         this.durability = durability;
     }
 
@@ -20,54 +24,59 @@ public class Ingredient {
         return name;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public String getCapacity() {
+    int getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(String capacity) {
+    void setCapacity(int capacity) {
         this.capacity = capacity;
     }
 
-    public String getFlavor() {
+    int getFlavor() {
         return flavor;
     }
 
-    public void setFlavor(String flavor) {
+    void setFlavor(int flavor) {
         this.flavor = flavor;
     }
 
-    public String getTexture() {
+    int getTexture() {
         return texture;
     }
 
-    public void setTexture(String texture) {
+    void setTexture(int texture) {
         this.texture = texture;
     }
 
-    public String getCalories() {
+    int getCalories() {
         return calories;
     }
 
-    public void setCalories(String calories) {
+    void setCalories(int calories) {
         this.calories = calories;
     }
 
-    public Ingredient() {
+    int getDurability() {
+        return durability;
+    }
+
+    void setDurability(int durability) {
+        this.durability = durability;
     }
 
     @Override
     public String toString() {
         return "Ingredient{" +
                 "name='" + name + '\'' +
-                ", capacity='" + capacity + '\'' +
-                ", flavor='" + flavor + '\'' +
-                ", texture='" + texture + '\'' +
-                ", calories='" + calories + '\'' +
-                ", durability='" + durability + '\'' +
+                ", capacity=" + capacity +
+                ", flavor=" + flavor +
+                ", texture=" + texture +
+                ", calories=" + calories +
+                ", durability=" + durability +
                 '}';
     }
 }

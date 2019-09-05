@@ -35,11 +35,11 @@ class Common {
 
             ingredient.setName(input.split(":")[0]);
 
-            ingredient.setCapacity(input.split("capacity")[1].split(",")[0].replace(" ",""));
-            ingredient.setDurability(input.split("durability")[1].split(",")[0].replace(" ",""));
-            ingredient.setFlavor(input.split("flavor")[1].split(",")[0].replace(" ",""));
-            ingredient.setTexture(input.split("texture")[1].split(",")[0].replace(" ",""));
-            ingredient.setCalories(input.split("calories")[1].split(",")[0].replace(" ",""));
+            ingredient.setCapacity(Integer.parseInt(input.split("capacity")[1].split(",")[0].replace(" ", "")));
+            ingredient.setDurability(Integer.parseInt(input.split("durability")[1].split(",")[0].replace(" ", "")));
+            ingredient.setFlavor(Integer.parseInt(input.split("flavor")[1].split(",")[0].replace(" ", "")));
+            ingredient.setTexture(Integer.parseInt(input.split("texture")[1].split(",")[0].replace(" ", "")));
+            ingredient.setCalories(Integer.parseInt(input.split("calories")[1].split(",")[0].replace(" ", "")));
 
             ingredients.add(ingredient);
         }

@@ -7,13 +7,16 @@ public class Parts {
         int i = 0;
         while (i < values.size() && values.get(i) != 99) {
             int val = values.get(i);
-            if (val == 1) {
-                values.set(values.get(i + 3), values.get(values.get(i + 1)) + values.get(values.get(i + 2)));
-                i = i + 4;
-            } else if (val == 2) {
-                values.set(values.get(i + 3), values.get(values.get(i + 1)) * values.get(values.get(i + 2)));
-                i = i + 4;
-            } else i++;
+            switch (val) {
+                case 1:
+                    values.set(values.get(i + 3), values.get(values.get(i + 1)) + values.get(values.get(i + 2)));
+                    i = i + 4;
+                    break;
+                case 2:
+                    values.set(values.get(i + 3), values.get(values.get(i + 1)) * values.get(values.get(i + 2)));
+                    i = i + 4;
+                    break;
+            }
         }
 
         System.out.println("---------------- PART 1 -------------------");
@@ -31,12 +34,15 @@ public class Parts {
                     int i = 0;
                     while (i < values.size() && values.get(i) != 99) {
                         int val = values.get(i);
-                        if (val == 1) {
-                            values.set(values.get(i + 3), values.get(values.get(i + 1)) + values.get(values.get(i + 2)));
-                            i = i + 4;
-                        } else if (val == 2) {
-                            values.set(values.get(i + 3), values.get(values.get(i + 1)) * values.get(values.get(i + 2)));
-                            i = i + 4;
+                        switch (val) {
+                            case 1:
+                                values.set(values.get(i + 3), values.get(values.get(i + 1)) + values.get(values.get(i + 2)));
+                                i = i + 4;
+                                break;
+                            case 2:
+                                values.set(values.get(i + 3), values.get(values.get(i + 1)) * values.get(values.get(i + 2)));
+                                i = i + 4;
+                                break;
                         }
                     }
                     if (values.get(0) == 19690720) {

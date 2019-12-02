@@ -37,7 +37,7 @@ public class Parts {
                         } else if (val == 2) {
                             values.set(values.get(i + 3), values.get(values.get(i + 1)) * values.get(values.get(i + 2)));
                             i = i + 4;
-                        } else i++;
+                        }
                     }
                     if (values.get(0) == 19690720) {
                         System.out.println("---------------- PART 2 -------------------");
@@ -48,8 +48,7 @@ public class Parts {
                         System.out.println();
                         break;
                     }
-                } catch (IndexOutOfBoundsException ignored) {
-                }
+                } catch (IndexOutOfBoundsException ignored) {}
             }
         }
     }

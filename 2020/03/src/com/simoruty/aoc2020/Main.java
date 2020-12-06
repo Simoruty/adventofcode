@@ -53,6 +53,9 @@ public class Main {
                 count++;
         }
 
+        for (BigInteger bigInteger : counts) {
+            System.out.print(bigInteger+" ");
+        }
         return counts.stream().reduce(BigInteger.ONE, BigInteger::multiply);
     }
 }

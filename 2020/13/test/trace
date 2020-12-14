@@ -45,8 +45,6 @@ What is the ID of the earliest bus you can take to the airport multiplied by the
 
 Your puzzle answer was 4722.
 
-The first half of this puzzle is complete! It provides one gold star: *
-
 --- Part Two ---
 The shuttle company is running a contest: one gold coin for anyone that can find the earliest timestamp such that the first bus ID departs at that time and each subsequent listed bus ID departs at that subsequent minute. (The first line in your input is no longer relevant.)
 
@@ -106,3 +104,5 @@ The earliest timestamp that matches the list 17,x,13,19 is 3417.
 However, with so many bus IDs in your list, surely the actual earliest timestamp will be larger than 100000000000000!
 
 What is the earliest timestamp such that all of the listed bus IDs depart at offsets matching their positions in the list?
+
+Your puzzle answer was 825305207525452.

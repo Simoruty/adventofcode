@@ -13,16 +13,14 @@ public class Common {
         Scanner scanner;
         try {
             scanner = new Scanner(new File(path));
-            Integer timestamp = Integer.parseInt(scanner.nextLine());
+            int timestamp = Integer.parseInt(scanner.nextLine());
             ArrayList<Integer> busIds = new ArrayList<>();
 
             String busidsString = scanner.nextLine();
 
             stream(busidsString.split(",")).forEach(s -> {
-                if (!s.equals("x"))
-                    busIds.add(Integer.parseInt(s));
-                else
-                    busIds.add(-1);
+                if (!s.equals("x")) busIds.add(Integer.parseInt(s));
+                else busIds.add(-1);
             });
 
             return new Departure(timestamp, busIds);

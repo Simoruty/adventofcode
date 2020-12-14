@@ -12,8 +12,8 @@ public class Main {
         System.out.println(departure);
         assert departure != null;
         System.out.println("Part1 : " + part1(departure));
-
-        System.out.println(part2(departure));
+        //System.out.println(part2It(departure));
+        part2(departure);
 
     }
 
@@ -37,14 +37,15 @@ public class Main {
         return (long) busIdChoice * delay;
     }
 
-    public static BigInteger part2(Departure departure) {
+    //Iteration method
+    public static BigInteger part2It(Departure departure) {
         boolean found = false;
         HashMap<Integer, Integer> busIdsMap = new HashMap<>();
         IntStream.range(0, departure.getBusIds().size()).forEach(i -> {
             if (departure.getBusIds().get(i) != -1) busIdsMap.put(i, departure.getBusIds().get(i));
         });
 
-        BigInteger timestamp = new BigInteger("100000000000000");
+        BigInteger timestamp = new BigInteger("1");
         while (!found) {
             timestamp = timestamp.add(new BigInteger("1"));
             for (Integer busId : busIdsMap.keySet()) {
@@ -57,5 +58,23 @@ public class Main {
             }
         }
         return timestamp;
+    }
+
+
+    public static void part2(Departure departure) {
+        HashMap<Integer, Integer> busIdsMap = new HashMap<>();
+        IntStream.range(0, departure.getBusIds().size()).forEach(i -> {
+            if (departure.getBusIds().get(i) != -1) busIdsMap.put(i, departure.getBusIds().get(i));
+        });
+
+        System.out.println("Part2:");
+        System.out.println("x = n-r (mod n)");
+        System.out.println("1\tn-r\tn");
+        System.out.println("------------");
+        for (Integer r : busIdsMap.keySet()) {
+            int n = busIdsMap.get(r);
+            System.out.println("1\t" + (n - (r % n)) + "\t" + n);
+        }
+        // https://comnuan.com/cmnn02/cmnn0200a/cmnn0200a.php
     }
 }

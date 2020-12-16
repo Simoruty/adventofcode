@@ -33,13 +33,12 @@ public class Main {
     }
 
     private static boolean isValid(ArrayList<Constraint> constraints, Integer valTicket) {
-        boolean valid = false;
         for (Constraint constraint : constraints) {
             Range ranges = constraint.getRange();
             if (valTicket >= ranges.getMin1() && valTicket <= ranges.getMax1() || valTicket >= ranges.getMin2() && valTicket <= ranges.getMax2())
-                valid = true;
+                return true;
         }
-        return valid;
+        return false;
     }
 
     public static long part2(ArrayList<Constraint> constraints, ArrayList<ArrayList<Integer>> nearbyTickets, ArrayList<Integer> ticket, String filter) {
